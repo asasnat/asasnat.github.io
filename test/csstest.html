@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
     <body>
+        <script type="text/javascript">
+	        var channel_max=128;for(audiochannels=new Array,a=0;a<channel_max;a++)audiochannels[a]=new Array,audiochannels[a].channel=new Audio,audiochannels[a].finished=-1;function play_multi_sound(n){for(a=0;a<audiochannels.length;a++)if(thistime=new Date,audiochannels[a].finished<thistime.getTime()){audiochannels[a].finished=thistime.getTime()+1e3*document.getElementById(n).duration,audiochannels[a].channel.src=document.getElementById(n).src,audiochannels[a].channel.load(),audiochannels[a].channel.play();break}}
+        </script>
+        
+        <audio id="testaudio1" src="test.wav" preload="auto"></audio>
+        
         <style>
             html {
                 font-family: Verdana;
@@ -26,7 +32,6 @@
         <p>PARAGRAPH!!!!11!1</p>
         <h1>SOME MORE TESTING LOL</h1>
         <p>ok ill try to calm down</p>
-        <button>Play some awesome music created by me</button>
-        <h6>ik the button above doesnt work lol</h6>
+        <button onclick="play_multi_sound('testaudio1')">Play some awesome music created by me</button>
     </body>
 </html>
