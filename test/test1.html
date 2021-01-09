@@ -1,25 +1,7 @@
 <html>
   <body>
     <script type="text/javascript">
-	    var channel_max = 128;										// number of channels
-	    audiochannels = new Array();
-	    for (a=0;a<channel_max;a++) {									// prepare the channels
-	    	audiochannels[a] = new Array();
-	    	audiochannels[a]['channel'] = new Audio();						// create a new audio object
-	    	audiochannels[a]['finished'] = -1;							// expected end time for this channel
-	    }
-	    function play_multi_sound(s) {
-	    	for (a=0;a<audiochannels.length;a++) {
-	    		thistime = new Date();
-	    		if (audiochannels[a]['finished'] < thistime.getTime()) {			// is this channel finished?
-	    			audiochannels[a]['finished'] = thistime.getTime() + document.getElementById(s).duration*1000;
-	    			audiochannels[a]['channel'].src = document.getElementById(s).src;
-	    			audiochannels[a]['channel'].load();
-	    			audiochannels[a]['channel'].play();
-	    			break;
-	    		}
-	    	}
-	    }
+	var channel_max=128;for(audiochannels=new Array,a=0;a<channel_max;a++)audiochannels[a]=new Array,audiochannels[a].channel=new Audio,audiochannels[a].finished=-1;function play_multi_sound(n){for(a=0;a<audiochannels.length;a++)if(thistime=new Date,audiochannels[a].finished<thistime.getTime()){audiochannels[a].finished=thistime.getTime()+1e3*document.getElementById(n).duration,audiochannels[a].channel.src=document.getElementById(n).src,audiochannels[a].channel.load(),audiochannels[a].channel.play();break}}
     </script>
     
     <audio id="testaudio1" src="test.wav" preload="auto"></audio>
