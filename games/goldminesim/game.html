@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <header><title>j_n's Gold Mine Simulator</title></header>
+    <body>
+        <header><h1>j_n's Gold Mine Simulator</h1></header>
+        <br>
+        Cash: <span id="cash">0</span><br>
+        Gold in Stock: <span id="gis">0</span><br>
+        <br>
+        Current Number of Hired Miners: <span id="miners">0</span><br>
+        Cost of Hiring More Miners: <span id="minercost">0</span><br>
+        <button onclick="mine()">Mine</button>
+        <button onclick="upgradeMiner()">Upgrade</button>
+        <button onclick="sellGold()">Sell Gold</button>
+        <script>
+            var cash = 0;
+            var minerUpgrade = 0;
+            var goldInStock = 0;
+            var minerPrice = 5;
+            function mine()
+            {
+                goldInStock += (minerUpgrade + 1) * 3;
+            }
+            function upgradeMiner()
+            {
+                if (cash < minerPrice)
+                {
+                    alert("You don't have enough cash!");
+                }
+                else
+                {
+                    minerUpgrade++;
+                    cash -= minerPrice;
+                    minerPrice *= 3;
+                }
+            }
+            function sellGold()
+            {
+                cash += goldInStock * 4;
+                goldInStock = 0;
+            }
+            
+            function updateSpan()
+            {
+                document.getElementById("cash").innerHTML = cash.toString();
+                document.getElementById("gis").innerHTML = goldInStock.toString();
+                document.getElementById("miners").innerHTML = minerUpgrade.toString();
+                document.getElementById("minercost").innerHTML = minerPrice.toString();
+            }
+            function getCash()
+            {
+                return cash;
+            }
+            function getMUpgrade()
+            {
+                return minerUpgrade;
+            }
+            function getGold()
+            {
+                return goldInStock;
+            }
+            function getMPrice()
+            {
+                return minerPrice;
+            }
+            function tick()
+            {
+            	requestAnimationFrame(tick);
+            	updateSpan();
+            }
+            tick();
+        </script>
+    </body>
+</html>
