@@ -1,0 +1,17 @@
+h1 {
+	font-size: 400%;
+}
+
+p {
+	font-size: 150%;
+}
+
+#download-link {
+	font-weight: bold;
+	font-size: 200%;
+}
+
+#text-cell {
+	text-align: left;
+	vertical-align: top;
+}
