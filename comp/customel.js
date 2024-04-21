@@ -1,5 +1,5 @@
 var theme;
-if (document.head.theme != null) theme = '/graph/' + document.currentScript.theme + '/';
+if (document.head.theme != null) theme = '/graph/' + document.currentScript.dataset.theme + '/';
 else theme = '/graph/';
 
 class Toolbar extends HTMLElement
