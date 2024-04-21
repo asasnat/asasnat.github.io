@@ -8,7 +8,7 @@ class Toolbar extends HTMLElement
     connectedCallback()
     {
         this.innerHTML =
-        '<a href="asasnat.github.io/index.html"><img src="asasnat.github.io/graph/home.gif" alt="Return to home" title="Return to home"></a>';
+        '<a href="https://asasnat.github.io/index.html"><img src="https://asasnat.github.io/graph/home.gif" alt="Return to home" title="Return to home"></a>';
     }
 }
 
