@@ -1,17 +1,26 @@
-h1 {
+h1 
+{
 	font-size: 400%;
 }
 
-p {
+p
+{
 	font-size: 150%;
 }
 
-#download-link {
+#download-link
+{
 	font-weight: bold;
 	font-size: 200%;
 }
 
-#text-cell {
+#text-cell
+{
 	text-align: left;
 	vertical-align: top;
+}
+
+#thumb
+{
+	width: 10%;
 }
