@@ -1,3 +1,7 @@
+var theme;
+if (document.head.theme != null) theme = '/graph/' + document.currentScript.theme + '/';
+else theme = '/graph/';
+
 class Toolbar extends HTMLElement
 {
     constructor()
@@ -8,7 +12,7 @@ class Toolbar extends HTMLElement
     connectedCallback()
     {
         this.innerHTML =
-        '<a href="/index.html"><img src="/graph/home.gif" alt="Return to home" title="Return to home"></a>';
+        '<a href="/index.html"><img src="' + theme + 'home.gif" alt="Return to home" title="Return to home"></a>';
     }
 }
 
@@ -21,7 +25,7 @@ class Bullet extends HTMLElement
 
     connectedCallback()
     {
-        this.innerHTML = '<img src="/graph/bup.gif">';
+        this.innerHTML = '<img src="' + theme + 'bup.gif">';
     }
 }
 
