@@ -26,7 +26,7 @@ class ToolbarBack extends HTMLElement
     connectedCallback()
     {
         this.innerHTML =
-        '<a href="../index.html"><img src="' + theme + 'back.png" alt="Go back a page" title="Go back a page"></a><a href="/index.html"><img src="' + theme + 'home.png" alt="Return to home" title="Return to home"></a>';
+        '<a href=' + "../index.html" + '><img src="' + theme + 'back.png" alt="Go back a page" title="Go back a page"></a><a href="/index.html"><img src="' + theme + 'home.png" alt="Return to home" title="Return to home"></a>';
     }
 }
 
