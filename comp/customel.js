@@ -12,7 +12,21 @@ class Toolbar extends HTMLElement
     connectedCallback()
     {
         this.innerHTML =
-        '<a href="/index.html"><img src="' + theme + 'home.gif" alt="Return to home" title="Return to home"></a>';
+        '<a href="/index.html"><img src="' + theme + 'home.png" alt="Return to home" title="Return to home"></a>';
+    }
+}
+
+class ToolbarBack extends HTMLElement
+{
+    constructor()
+    {
+        super();
+    }
+    
+    connectedCallback()
+    {
+        this.innerHTML =
+        '<a href=../index.html"><img src="' + theme + 'back.png" alt="Go back a page" title="Go back a page"></a><a href="/index.html"><img src="' + theme + 'home.png" alt="Return to home" title="Return to home"></a>';
     }
 }
 
@@ -25,9 +39,11 @@ class Bullet extends HTMLElement
 
     connectedCallback()
     {
-        this.innerHTML = '<img src="' + theme + 'bup.gif">';
+        this.innerHTML = '<img src="' + theme + 'bup.png">';
     }
 }
 
 customElements.define("bullet-comp", Bullet);
 customElements.define("toolbar-comp", Toolbar);
+customElements.define("toolbarback-comp", ToolbarBack);
+

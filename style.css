@@ -3,7 +3,7 @@ body
 	text-align: center;
 	color: white;
 	font-family:'Courier New', Courier, monospace;
-	background-image: url("/graph/bg.gif");
+	background-image: url("./graph/bg.gif");
 	font-size: 18px;
 }
 
